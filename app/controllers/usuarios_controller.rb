@@ -2,7 +2,6 @@ class UsuariosController < ApplicationController
   def new
   end
 
-
   # Proceso para crear un usuario
 
   def create
@@ -11,7 +10,8 @@ class UsuariosController < ApplicationController
   end
 
   def index
-    @alluser = Image.all
+    #@alluser = Image.all
+    @allUsuarios = Usuario.all
   end
 
   private

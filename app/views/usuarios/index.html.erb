@@ -1,0 +1,22 @@
+<h1>Lista de usuarios</h1>
+
+<%= link_to 'nuevo usuario', new_usuario_path %>
+<br><br><br>
+
+<table>
+<tr>
+<th>Nombre</th>
+<th>Apellido</th>
+<th>Correo</th>
+<th>Editar</th>
+</tr>
+<% @allUsuarios.each do |f| %>
+<tr>
+<td><%= f.nombre %></td>
+<td><%= f.apellido %></td>
+<td><%= f.correo %></td>
+
+</tr>
+<% end %>
+</table>
+
