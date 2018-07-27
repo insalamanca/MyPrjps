@@ -10,12 +10,16 @@
 <th>Correo</th>
 <th>Editar</th>
 </tr>
+
 <% @allUsuarios.each do |f| %>
 <tr>
 <td><%= f.nombre %></td>
 <td><%= f.apellido %></td>
 <td><%= f.correo %></td>
-
+<td><%= link_to 'Show', usuario_path(f) %></td>
+<td><%= link_to 'Edit', edit_usuario_path(f) %></td>
+<td><%= link_to 'Destroy', usuario_path(f),
+method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
 <% end %>
 </table>
